@@ -1,7 +1,7 @@
 INSERT INTO rol(nombre) VALUES ('Encargado de Inscripcion'),
                                ('Asistente de Control de Asistencia'),
                                ('Administrador'),
-                               ('Instructor');
+                               ('ModelInstructor');
 
 INSERT INTO nivel(nombre) VALUES ('Inicial'),
                                  ('Intermedio'),
