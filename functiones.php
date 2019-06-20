@@ -14,5 +14,5 @@ function view($template, $data = []){
 
 function redirect($link){
     header("location: $link");
-    die;
+    die;    
 }

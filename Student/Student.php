@@ -12,14 +12,14 @@ class Student
 
     function all()
     {
-        $sql = "SELECT * FROM estudiante WHERE delete_at IS NULL;"; //I need Make in Data Base
+        $sql = "SELECT * FROM estudiante WHERE deleted_at IS NULL;"; //I need Make in Data Base
         $stm  = $this->db->prepare($sql);
         $stm->execute();
         return $data = $stm->fetchAll();
     }
     function get($id)
     {
-        $sql = "SELECT * FROM estudiante WHERE idEstudiante = :id AND delete_at IS NULL"; //aux= deleted_at
+        $sql = "SELECT * FROM estudiante WHERE id = :id AND deleted_at IS NULL"; //aux= deleted_at
         $stm = $this->db->prepare($sql);
         $stm->bindParam(":id",$id);
         $stm->execute();
@@ -32,8 +32,8 @@ class Student
     }
     function add($data)
     {
-        $sql = "INSERT INTO student(ciEstudiante,primerNombre,fechaNacimiento)
-                VALUES (:ciEstudiante,:primerNombre,:fechaNacimiento)";
+        $sql = "INSERT INTO estudiante(ciEstudiante,primerNombre,fechaNacimiento)
+                VALUES (:ciEstudiante,:primerNombre,:fechaNacimiento);";
         $stm = $this->db->prepare($sql);
         $stm->bindParam(":ciEstudiante",$data['ciEstudiante']);
         $stm->bindParam(":primerNombre",$data['primerNombre']);
@@ -44,7 +44,7 @@ class Student
     }
     function update($id,$data, $nullOveride = false)
     {
-        $sql = "UPDATE estudiante SET primerNombre = :name WHERE idEstudiante = :id;";
+        $sql = "UPDATE estudiante SET primerNombre = :name WHERE id = :id;";
         $stm = $this->db->prepare($sql);
         $stm->bindParam(":name",$data['primerNombre']);
         $stm->bindParam(":id",$id);
@@ -52,7 +52,7 @@ class Student
     }
     function delete($id)
     {
-        $sql = "UPDATE estudiante SET delete_at=NOW() WHERE idEstudiante = :id;";
+        $sql = "UPDATE estudiante SET deleted_at=NOW() WHERE id = :id;";
         $stm = $this->db->prepare($sql);
         $stm->bindParam(":id",$id);
         $stm->execute();
