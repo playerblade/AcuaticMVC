@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-edge, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../../../../AcuaticMVC/node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link href="../../../../AcuaticMVC/node_modules/bootstrap/dist/css/simple-sidebar.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../../../AcuaticMVC/Resources/style.css">
+    <link rel="stylesheet" href="/AcuaticMVC/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link href="/AcuaticMVC/node_modules/bootstrap/dist/css/simple-sidebar.css" rel="stylesheet">
+    <link rel="stylesheet" href="/AcuaticMVC/Resources/style.css">
     <title>Acuatic Club</title>
 </head>
 <body> <!--PONE IMAGEN SI-->
@@ -40,10 +40,10 @@
     ?>
 
 
-    <script src="../../../../AcuaticMVC/node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../../../../AcuaticMVC/node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="../../../../AcuaticMVC/node_modules/popper.js/dist/umd/popper.min.js"></script>           
-    <script src="../../../../AcuaticMVC/node_modules/bootstrap/dist/js/bootstrap.min.js" ></script>
+    <script src="/AcuaticMVC/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/AcuaticMVC/node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="/AcuaticMVC/node_modules/popper.js/dist/umd/popper.min.js"></script>           
+    <script src="/AcuaticMVC/node_modules/bootstrap/dist/js/bootstrap.min.js" ></script>
 
     </body>
 </html>
