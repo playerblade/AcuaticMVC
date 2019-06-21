@@ -18,7 +18,8 @@ Route::get('/student/{id}/delete','\\Student\\Controller@delete');
 //fin Students
 
 
-
+// Instructor routes
+Route::get('/instructor', '\\Instructor\\Controller@index');
 
 
 throw new Error("Route is not defined!");

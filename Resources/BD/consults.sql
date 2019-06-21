@@ -4,3 +4,8 @@ FROM instructor i JOIN horarioasignadoinstructor hai on i.id = hai.id
 JOIN nivel n on hai.idNivel = n.id
 JOIN inscripcionmensualidad im on hai.id = im.id
 JOIN estudiante e on im.idEstudiante = e.id;
+
+
+-- Select all Concat
+SELECT Concat(e.primerNombre,' ',e.apellidoPaterno,' ',e.apellidoMaterno)AS estudiante 
+FROM estudiante e; 

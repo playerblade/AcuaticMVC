@@ -7,7 +7,7 @@
             <form role="form" action="<?= $action ?>" method="post">
                 <div class="form-group">
                     <label for="ciInstructor"> Ci Estudiante </label>
-                    <input type="text" name="ciEstudiante" id="ciEstudiante" value="<?= $student['primerNombre'] ?? "" ?>" class="form-control" required>
+                    <input type="text" name="ciEstudiante" id="ciEstudiante" value="<?= $student['ciEstudiante'] ?? "" ?>" class="form-control" required>
                 </div>
 
                 <div class="form-group">

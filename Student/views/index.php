@@ -1,3 +1,4 @@
+<div class="container">
 <div class="card-body">
     <div class="card-header">
         <a href="<?= Route::link("/student/create")?>" class="btn btn-primary btn-lg">
@@ -11,8 +12,9 @@
                 <tr>
                 <th scope="col">Id</th>
                 <th scope="col">Ci</th>
-                <th scope="col">Primer nombre</th>
-                <th scope="col">Apellido Paterno</th>
+                <th scope="col">Estudiante</th>
+<!--                <th scope="col">Primer nombre</th>-->
+<!--                <th scope="col">Apellido Paterno</th>-->
                 <th scope="col">Direccion</th>
                 <th scope="col">Fecha De Nacimiento</th>
                 <th scope="col">Genero</th>
@@ -30,10 +32,7 @@
                             <?= $student['ciEstudiante']?>
                         </td>
                         <td>
-                            <?= $student['primerNombre']?>
-                        </td>
-                        <td>
-                            <?= $student['apellidoPaterno']?>
+                            <?= $student['estudiante']?>
                         </td>
                         <td>
                             <?= $student['direccion']?>
@@ -60,5 +59,6 @@
             </tbody>
         </table>
     </div>
+</div>
 </div>
 

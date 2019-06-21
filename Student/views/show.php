@@ -1,5 +1,4 @@
 <div class="container">
-    <div class="panel-group">
     <div class="card-body">
         <div class="card-header">
             <h2>
@@ -11,22 +10,21 @@
         </div>
         
         <div class="card-header">
-            <label for="id">Id:</label>
-            <?= $student['id'] ?>
-            <br>
-            <label for="primerNombre">Primer Nombre:</label>
-            <?= $student['primerNombre']?>
-            
+            <div class="card-body">
+                <div class="p-1 mb-0 bg-dark text-white">
+                    <h4>ID</h4>
+                </div>
+                <div class="p-2 mb-3 bg-light text-dark">
+                    <h5><?= $student['id'] ?></h5>
+                </div>
+
+                <div class="p-1 mb-0 bg-dark text-white">
+                    <h5>Primer Nombre</h5><!--Nombre Completo-->
+                </div>
+                <div class="p-2 mb-3 bg-light text-dark">
+                    <h6><?= $student['primerNombre']?></h6>
+                </div>  
+            </div>   
         </div>   
     </div>
-    </div>
-</div>
-<div class="container">
-  <h2>Panels with Contextual Classes</h2>
-  <div class="panel-group">
-<div class="panel panel-primary">
-      <div class="panel-heading">Panel with panel-primary class</div>
-      <div class="panel-body">Panel Content</div>
-    </div>
-</div>
 </div>    

@@ -12,7 +12,9 @@ class Student
 
     function all()
     {
-        $sql = "SELECT * FROM estudiante WHERE deleted_at IS NULL;"; //I need Make in Data Base
+        $sql = "SELECT * , Concat(e.primerNombre,' ',e.apellidoPaterno,' ',e.apellidoMaterno)AS estudiante 
+                FROM estudiante e
+                WHERE deleted_at IS NULL;"; //I need Make in Data Base
         $stm  = $this->db->prepare($sql);
         $stm->execute();
         return $data = $stm->fetchAll();

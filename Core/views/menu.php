@@ -8,6 +8,9 @@
             <a href="<?= Route::link("/student") ?>" class="list-group-item list-group-item-action bg-dark text-light">
                 Student
             </a>
+            <a href="<?= Route::link("/instructor") ?>" class="list-group-item list-group-item-action bg-dark text-light">
+                Instructor
+            </a>
         </div>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -16,8 +19,8 @@
     ?>
   </div>
 
-  <script src="../../../../AcuaticMVC/node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="../../../../AcuaticMVC/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/AcuaticMVC/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="/AcuaticMVC/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
     $("#menu-toggle").click(function(e) {

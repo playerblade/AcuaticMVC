@@ -9,3 +9,6 @@ include "./Home/Controller.php";
 
 include "./Student/Controller.php";
 include "./Student/Student.php";
+
+include "./Instructor/Controller.php";
+include "./Instructor/Instructor.php";
