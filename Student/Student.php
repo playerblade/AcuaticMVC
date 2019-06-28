@@ -21,7 +21,10 @@ class Student
     }
     function get($id)
     {
-        $sql = "SELECT * FROM estudiante WHERE id = :id AND deleted_at IS NULL"; //aux= deleted_at
+        $sql = "SELECT *, Concat(primerNombre,' ',apellidoPaterno,' ',apellidoMaterno) AS estudiante 
+                FROM estudiante 
+                WHERE id = :id 
+                AND deleted_at IS NULL"; //aux= deleted_at
         $stm = $this->db->prepare($sql);
         $stm->bindParam(":id",$id);
         $stm->execute();
@@ -34,12 +37,17 @@ class Student
     }
     function add($data)
     {
-        $sql = "INSERT INTO estudiante(ciEstudiante,primerNombre,fechaNacimiento)
-                VALUES (:ciEstudiante,:primerNombre,:fechaNacimiento);";
+        $sql = "INSERT INTO estudiante(ciEstudiante,primerNombre,segundoNombre,apellidoPaterno,apellidoMaterno,direccion,fechaNacimiento,genero)
+                VALUES (:ciEstudiante,:primerNombre,:segundoNombre,:apellidoPaterno,:apellidoMaterno,:direccion ,:fechaNacimiento,:genero);";
         $stm = $this->db->prepare($sql);
         $stm->bindParam(":ciEstudiante",$data['ciEstudiante']);
         $stm->bindParam(":primerNombre",$data['primerNombre']);
+        $stm->bindParam(":segundoNombre",$data['segundoNombre']);
+        $stm->bindParam(":apellidoPaterno",$data['apellidoPaterno']);
+        $stm->bindParam(":apellidoMaterno",$data['apellidoMaterno']);
+        $stm->bindParam(":direccion",$data['direccion']);
         $stm->bindParam(":fechaNacimiento",$data['fechaNacimiento']);
+        $stm->bindParam(":genero",$data['genero']);
         $stm->execute();
 
         return $this->db->lastInsertId();

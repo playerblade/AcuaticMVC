@@ -2,15 +2,22 @@
     <!-- Sidebar -->
     <div class="bg-dark border-dark" id="sidebar-wrapper">
         <div class="list-group list-group-flush" style="width: 13rem;">
-            <a href="<?= Route::link("") ?>" class="list-group-item list-group-item-action bg-dark text-light">
-                Home
-            </a>
-            <a href="<?= Route::link("/student") ?>" class="list-group-item list-group-item-action bg-dark text-light">
-                Student
-            </a>
-            <a href="<?= Route::link("/instructor") ?>" class="list-group-item list-group-item-action bg-dark text-light">
-                Instructor
-            </a>
+
+            <?php if (!empty($_SESSION['usuario'])){?>
+                <a href="<?= Route::link("/") ?>" class="list-group-item list-group-item-action bg-dark text-light">
+                    Home
+                </a>
+                <a href="<?= Route::link("/student") ?>" class="list-group-item list-group-item-action bg-dark text-light">
+                    Student
+                </a>
+                <a href="<?= Route::link("/instructor") ?>" class="list-group-item list-group-item-action bg-dark text-light">
+                    Instructor
+                </a>
+                <a href="<?= Route::link("/tutor") ?>" class="list-group-item list-group-item-action bg-dark text-light">
+                    Tutor
+                </a>
+            <?php }?>
+
         </div>
     </div>
     <!-- /#sidebar-wrapper -->

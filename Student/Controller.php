@@ -9,7 +9,8 @@ class Controller
     function __construct()
     {
         $this->student = new Student();
-    }       
+    }
+
     function index()
     {
         $data = $this->student->all();

@@ -75,6 +75,12 @@ VALUES ('JSGD838', 'Socrates', 'Davila', 'M', '1980-03-1', 1);
 INSERT INTO estudiante(ciEstudiante, primerNombre, apellidoPaterno,apellidoMaterno, genero, fechaNacimiento, activo)
 VALUES ('1444-RTE', 'Rosendo', 'Perales','Torrez', 'M', '1980-03-1', 1);
 
+INSERT INTO estudiante(ciEstudiante, primerNombre, apellidoPaterno,apellidoMaterno, genero, fechaNacimiento, activo)
+VALUES ('43464-SGF', 'Julio', 'Gomez','Almanza', 'M', '1999-01-1', 1);
+INSERT INTO estudiante(ciEstudiante, primerNombre, apellidoPaterno,apellidoMaterno, genero, fechaNacimiento, activo)
+VALUES ('6876-ADS', 'Wilson', 'Fernandez','Perez', 'M', '2000-05-1', 1);
+
+
 
 INSERT INTO tutorestudiante(idEstudiante, idTutor) VALUES (1, 1);
 
